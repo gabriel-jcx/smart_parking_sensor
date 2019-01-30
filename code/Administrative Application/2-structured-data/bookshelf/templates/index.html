@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <script type="text/javascript">
+      function getCookie(){
+         var name = "username=";
+         var decodedCookie = decodeURIComponent(document.cookie);
+         if(!decodedCookie){
+            window.location.replace("/");
+         }
+      }
+   </script> 
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css')}}">
+		<title> 
+			Home
+		</title>
+		<h1>
+			Choose A Parking Lot
+		</h1>
+	</head>
+	<body onload="getCookie()">
+      <a href="/test_tcp" class="tcptest">
+         tcp_test
+      </a>
+      <br>
+      <br>
+      <a href="/Register" class="regUser">
+         Register User
+      </a>
+      <br>
+      <br>
+      <a href="/printQR" class="printQR">
+         Print QR Code
+      <br/>
+      <br/>
+		<a href="/northRemote" class="northRemote">
+		   North Remote
+		</a>
+		<br/>
+		<br/>
+		<a href="/eastRemote" class="eastRemote">
+			East Remote
+      </a>
+      <br/>
+      <br/>
+      <a href="/westRemote" class="westRemote">
+			West Remote
+      </a>
+      <br/>
+      <br/>
+      <a href="/Core West" class="coreWest">
+			Core West
+      </a>
+      <br/>
+      <br/>
+      <a href="/stats" class="stats">
+			Statistics
+      </a>
+      <br/>
+      <br/>
+      <a href="/logout" class="logout">
+         Log out
+      </a>
+
+	</body>
+</html> 

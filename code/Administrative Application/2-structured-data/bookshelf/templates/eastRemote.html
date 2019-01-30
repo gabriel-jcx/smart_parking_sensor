@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script type="text/javascript">
+      function getCookie(){
+         var name = "username=";
+         var decodedCookie = decodeURIComponent(document.cookie);
+         if(!decodedCookie){
+            window.location.replace("/");
+         }
+      }
+      
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction0001() {document.getElementById("myDropdown0001").classList.toggle("show");}
+      function myFunction0002() {document.getElementById("myDropdown0002").classList.toggle("show");}
+      
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-menu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+
+</script>
+
+{{clickFunctions}}
+		   
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/westRemote.css')}}">
+	   <title> 
+			East Remote
+		</title>
+	</head>
+	<body onload="getCookie()" style="margin-left: 20px;">
+		<br/>
+		<font size="+30">Viewing East Remote Lot</font>
+		<br>
+		
+		{% block spot1dropdown %}
+		      {% for spots in eastSpots %}
+		         {{spots}}
+		      {% endfor %}
+      {% endblock %}
+      
+      
+      
+      <div id="lotPic">
+         <img src="{{url_for('static',filename='img/eastRemote.png')}}"   
+            width="2000px" height="700px" />
+		</div>
+		
+		<br/>
+		<br/>
+      <form method="POST" enctype="multipart/form-data">
+         <input type="checkbox" name="changeA" value = "A">A<br>
+         <input type="checkbox" name="changeB" value = "B">B<br>
+         <input type="checkbox" name="changeC" value = "C">C<br>
+         <input type="checkbox" name="changeN" value = "N">N<br>
+         <input type="checkbox" name="changeR" value = "R">R<br>
+         <input type="submit" name="submit" value="changePermission">
+      </form>
+      <br/>
+      <br/>
+      <br/>
+      <button onClick="javascript:window.location.href='Menu'">
+         Click to go back
+		</button>
+	</body>
+</html> 

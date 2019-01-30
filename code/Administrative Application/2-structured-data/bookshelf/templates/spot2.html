@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   <script type="text/javascript">
+      function getCookie(){
+         var name = "username=";
+         var decodedCookie = decodeURIComponent(document.cookie);
+         if(!decodedCookie){
+            window.location.replace("/");
+         }
+      }
+   </script> 
+      <title> 
+			Spot 2
+		</title>
+	</head>
+	<body onload="getCookie()">
+		<button onClick="javascript:window.location.href='West Remote'">
+		   Click to go back
+		</button>
+		<br/>
+		<br/>
+		
+		{% block checkSpot2 %}
+		{% if readSpace2 %}
+		   <font size="+30">Spot 2 is CLAIMED</font>
+		{% else %}
+		   <font size="+30">Spot 2 is FREE</font> 
+      {% endif %}
+      {% endblock %}
+      
+		<br/>
+		<br/>
+		<form method="POST" enctype="multipart/form-data">
+         <button type="submit" name="submit" value="claim">claim</button>
+         <br/>
+         <br/>
+         <button type="submit" name="submit" value="free">free</button>
+         <br/>
+         <br/>
+         <button type="submit" name="submit" value="reserve"> reserve</button>
+         <br/>
+         <br/>
+         <form method="POST" enctype="multipart/form-data">
+         <input type="checkbox" name="changeA" value = "A">A<br>
+         <input type="checkbox" name="changeB" value = "B">B<br>
+         <input type="checkbox" name="changeC" value = "C">C<br>
+         <input type="checkbox" name="changeN" value = "N">N<br>
+         <input type="checkbox" name="changeR" value = "R">R<br>
+         <input type="submit" name="submit" value="changePermission">
+      </form>
+      </form>
+      
+	</body>
+</html> 

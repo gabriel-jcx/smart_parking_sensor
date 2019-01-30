@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<script>
+/*function setCookie(uname, password, expire_hours)
+   var time = new Date()
+   time.setTime(time.getTime() + (expire_housr * 60 * 60 * 1000))
+   var expires = "expires= " + time.toGMTString()
+   document.cookie = "username="+uname+";"+ expires + ";path=/"; 
+}*/
+</script>
+   <head>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',  filename='css/Login.css')}}">	
+      <title> 
+         Link A Sensor Box
+      </title>
+   </head>
+ <form name="login_form" id="login" method="POST" role="form">
+  <div class="imgcontainer">
+     <img src={{url_for('static', filename='img/ucsclogo.png')}} width="300px" height="100px" alt="UCSC" class="UCSC">
+  </div>
+
+  <div class="container">
+    <label for="parking_lot"><b>Parking Lot</b></label>
+    <input type="text" placeholder="Please input parking lot for the sensor box" name="parking_lot" id="parking_lot" required>
+
+    <label for="spot_id"><b>Sensor Box Spot ID</b></label>
+    <input type="text" placeholder="Please input Last Name" name="spot_id" id="spot_id" required>
+    <label for="MAC"><b>MAC Address of the Sensor Box</b></label>
+    <input type="text" placeholder="Please input the Mac Address of the sensor box" name="MAC" id="MAC"required>
+    <button type="submit">Print</button>
+<!--    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+</label> -->
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+     <button onClick="javascript:window.location.href='..'" type="button" class="cancelbtn">Cancel</button>
+  </div>
+  </form>
+</html> 

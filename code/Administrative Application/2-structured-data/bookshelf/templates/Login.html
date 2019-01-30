@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<script>
+function setCookie(uname, password, expire_hours)
+   var time = new Date()
+   time.setTime(time.getTime() + (expire_housr * 60 * 60 * 1000))
+   var expires = "expires= " + time.toGMTString()
+   document.cookie = "username="+uname+";"+ expires + ";path=/"; 
+}
+</script>
+   <head>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',  filename='css/Login.css')}}">	
+      <title> 
+         Login
+      </title>
+   </header>
+ <form name="login_form" id="login" method="POST" role="form">
+  <div class="imgcontainer">
+     <img src={{url_for('static', filename='img/ucsclogo.png')}} width="300px" height="100px" alt="UCSC" class="UCSC">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" id="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="passwd" required>
+
+    <button type="submit">Login</button>
+<!--    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+</label> -->
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+     <button onClick="javascript:window.location.href='..'" type="button" class="cancelbtn">Cancel</button>
+    <span onClick="javascript:window.location.href='..'" class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+  </form>
+</html> 

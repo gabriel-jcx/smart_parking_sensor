@@ -1,0 +1,19 @@
+body {
+	color: red;
+}
+
+.parkingSpot{
+   width: 100px;
+   height: 200px;
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+	background-color: white;
+}
+
+.parkingSpot.cyan {
+	background-color: pink;
+}
+
+

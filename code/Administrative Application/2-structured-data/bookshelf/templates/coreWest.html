@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   <script type="text/javascript">
+      function getCookie(){
+         var name = "username=";
+         var decodedCookie = decodeURIComponent(document.cookie);
+         if(!decodedCookie){
+            window.location.replace("/");
+         }
+      }
+   </script> 
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/coreWest.css')}}">
+		<title> 
+			Core East
+		</title>
+	</head>
+	<body onload="getCookie()">
+		The stuff for core east should go on this page. <br />
+		<button onClick="javascript:window.location.href='Menu'">Click to go back</button>
+	</body>
+</html> 

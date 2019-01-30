@@ -1,0 +1,227 @@
+a[href $= ".html"] {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    background-color: lightblue;
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+}
+a.Login{
+   color: magenta;
+}
+
+a.northRemote {
+   color: green;
+}
+
+a.northRemote:link{
+    background-color: green;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.northRemote:visited{
+    background-color: green;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.northRemote:hover{
+    background-color: green;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.northRemote:active{
+    background-color: green;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+
+a.eastRemote {
+   color: orange;
+}
+
+a.eastRemote:link{
+    background-color: orange;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.eastRemote:visited{
+    background-color: orange;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.eastRemote:hover{
+    background-color: orange;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.eastRemote:active{
+    background-color: orange;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+
+a.westRemote {
+   color: orange;
+}
+
+a.westRemote:link{
+    background-color: orange;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.westRemote:visited{
+    background-color: orange;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.westRemote:hover{
+    background-color: orange;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.westRemote:active{
+    background-color: orange;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+a.coreWest {
+   color: red;
+}
+
+a.coreWest:link{
+    background-color: red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.coreWest:visited{
+    background-color: red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.coreWest:hover{
+    background-color: red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.coreWest:active{
+    background-color: red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+a.stats {
+   color: lightblue;
+}
+
+a.stats:link{
+    background-color: lightblue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.stats:visited{
+    background-color: lightblue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.stats:hover{
+    background-color: lightblue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.stats:active{
+    background-color: lightblue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+

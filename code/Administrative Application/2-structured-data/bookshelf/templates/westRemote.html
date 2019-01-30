@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   <!--
+      these are references to other files on the internet or within the app
+   -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/westRemote.css')}}">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+   <script type="text/javascript">
+      function getCookie(){
+         var name = "username=";
+         var decodedCookie = decodeURIComponent(document.cookie);
+         if(!decodedCookie){
+            window.location.replace("/");
+         }
+      }
+      
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction0001() {document.getElementById("myDropdown0001").classList.toggle("show");}
+      function myFunction0002() {document.getElementById("myDropdown0002").classList.toggle("show");}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    //alert("click");
+    var dropdowns = document.getElementsByClassName("dropdown-menu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+<!--
+   the following is javascript code from the crud.py file which handles all the button clicking capabilities in javascript
+-->
+{{clickFunctions}}
+
+	   <title> 
+			West Remote
+		</title>
+	</head>
+	<body onload="getCookie()" style="margin-left: 20px;">
+		<br/>
+		<font size="+30">Viewing West Remote Lot</font>
+		<br>
+		<!--
+         a loop that puts all the dots(parking spots) on the page
+      -->
+		{% block spot1dropdown %}
+		      {% for spots in westSpots %}
+		         {{spots}}
+		      {% endfor %}
+      {% endblock %}
+   <script>
+function lotPermissionFunction() {
+   document.getElementById("lotPermissionList").classList.toggle("show");
+}</script>
+      <!--
+         change lot permission button which links into a checkbox form
+      -->
+      <div class="dropdown">
+         <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-dark-grey" style="font-size:12px;padding:5px 10px">Change Lot Permission</button>      
+      </div>
+      <div id="id01" class="w3-modal">
+         <div class="w3-modal-content">
+            <div class="w3-container">
+               <span onclick="document.getElementById('id01').style.display='none'" 
+                  class="w3-button w3-display-topright">&times;</span>
+         <form method="POST" enctype="multipart/form-data">
+         <br>
+         <input type="checkbox" name="changeA" value = "A">A<br>
+         <input type="checkbox" name="changeB" value = "B">B<br>
+         <input type="checkbox" name="changeC" value = "C">C<br>
+         <input type="checkbox" name="changeN" value = "N">N<br>
+         <input type="checkbox" name="changeR" value = "R">R<br>
+         <input type="checkbox" name="changeU" value = "U">Guest<br>
+         <input type="submit" name="submit" value="changePermission">
+         </div>
+      </form>
+            </div>
+         </div>
+      </div> 
+      <!--
+         picture of the parking lot on the page
+      -->
+      <div id="lotPic">
+         <img src="{{url_for('static',filename='img/westRemote.png')}}"   
+            width="2000px" height="700px" />
+		</div>
+     <!-- <form method="POST" enctype="multipart/form-data">
+         <input type="checkbox" name="changeA" value = "A">A<br>
+         <input type="checkbox" name="changeB" value = "B">B<br>
+         <input type="checkbox" name="changeC" value = "C">C<br>
+         <input type="checkbox" name="changeN" value = "N">N<br>
+         <input type="checkbox" name="changeR" value = "R">R<br>
+         <input type="submit" name="submit" value="changePermission">
+     </form> -->
+      <!--
+         back button to go up one level to main menu
+      -->
+      <button onClick="javascript:window.location.href='dashboard'">
+         Click to go back
+		</button>
+	</body>
+</html> 

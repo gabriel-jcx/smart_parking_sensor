@@ -1,0 +1,86 @@
+# [START claim0001]
+@crud.route("claimSpot")
+def claimSpot():
+   username = request.cookies.get('username')
+   if not username:
+      return redirect("/")
+   claim_space(1, westRemote)
+   return redirect("West Remote")
+# [END claim0001]
+
+# [START view]
+@crud.route("view001")
+def view001():
+   username = request.cookies.get('username')
+   if not username:
+      return redirect("/")
+   download_blob("images-uploadviagateway","1_image.jpg","bookshelf/static/img/1_image.jpg")
+   html_head="<html>"
+   image_string = "<img src={{url_for('static',filename='img/1_image.jpg')}}>"
+   html_tail="</html>"
+   f=open("bookshelf/templates/view001.html","w")
+   f.write(html_head+image_string+html_tail)
+   f.close()
+   return render_template("view001.html")
+# [END view]
+
+# [START free1]
+@crud.route("free0001")
+def free0001():
+   username = request.cookies.get('username')
+   if not username:
+      return redirect("/")
+   free_space(1)
+   return redirect("West Remote")
+# [END free0001]
+
+# [START reserve1]
+@crud.route("reserve0001")
+def reserve0001():
+   username = request.cookies.get('username')
+   if not username:
+      return redirect("/")
+   reserve_space(1)
+   return redirect("West Remote")
+# [END reserve0001]
+
+# [START change1A]
+@crud.route("change1A")
+def change1A():
+   username = request.cookies.get('username')
+   if not username:
+      return redirect("/")
+      change_space_permission(1,u'A')
+      return redirect("West Remote")
+   # [END change1A]
+
+   # [START change1B]
+@crud.route("change1B")
+def change1B():
+   username = request.cookies.get('username')
+   if not username:
+      return redirect("/")
+   change_space_permission(1,u'B')
+   return redirect("West Remote")
+# [END change1B]
+
+# [START change1C]
+@crud.route("change1C")
+def change1C():
+   username = request.cookies.get('username')
+   if not username:
+      return redirect("/")
+   change_space_permission(1,u'C')
+   return redirect("West Remote")
+# [END change1C]
+
+# [START change1R]
+@crud.route("change1R")
+def change1R():
+   username = request.cookies.get('username')
+   if not username:
+      return redirect("/")
+   change_space_permission(1,u'R')
+   return redirect("West Remote")
+# [END change1R]
+
