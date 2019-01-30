@@ -1,0 +1,15 @@
+02/02/2018
+Set up the Pi in the lab,
+Setting up the opencv environment
+Finish installing the opencv environment
+
+02/08/2018
+Setting up the raspberry pi camera on the Pi
+Testing:
+Pi camera takes around 3 seconds to take a picture if just use the command #raspistill xxxx.jpg# in the terminal
+
+02/09/2018
+Wrote code in python to take a picture via Pi Camera lib so that the opencv library can access the image and then process it
+Installing the tensorflow currently
+Learning OpenCV in the meantime
+

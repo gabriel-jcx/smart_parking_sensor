@@ -1,0 +1,40 @@
+{
+  "name": "mobileapp",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest-react-native": "^18.0.0",
+    "react-test-renderer": "16.2.0"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "dependencies": {
+    "@google-cloud/datastore": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "es6-symbol": "^3.1.1",
+    "exp": "^51.4.0",
+    "node-rsa": "^0.4.2",
+    "python-shell": "^0.5.0",
+    "react": "^16.2.0",
+    "react-native": "^0.52.3",
+    "react-native-beacons-manager": "^1.0.7",
+    "react-native-ble-manager": "^6.2.9",
+    "react-native-ble-plx": "^0.9.0",
+    "react-native-rsa": "0.0.3",
+    "react-native-rsa-native": "^1.0.21",
+    "react-native-search-bar": "^3.4.1",
+    "react-native-xcode-packager": "^0.1.0",
+    "react-navigation": "^1.5.9"
+  },
+  "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
+  "author": "",
+  "license": "ISC"
+}

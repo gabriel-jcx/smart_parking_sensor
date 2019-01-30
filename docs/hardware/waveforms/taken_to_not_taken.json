@@ -1,0 +1,5 @@
+{signal: [
+  {name: 'wake_up',  wave: 'x0.1|.0..'},
+  {name: 'status', wave: '1..0|....'},
+  {name: 'ack',    wave: '0...|10..'}
+]}

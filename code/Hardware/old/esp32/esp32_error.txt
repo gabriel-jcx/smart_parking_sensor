@@ -1,0 +1,19 @@
+-----start ESP32 18 ------
+Curr_state: 0,Prev_state: 0
+Advertizing started...
+
+Wait for WiFi... ASSERT_PARAM(1024 0), in rwble.c at line 222Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0)
+Register dump:
+PC      : 0x400846b8  PS      : 0x00060d34  A0      : 0x80086e52  A1      : 0x3ffc05b0  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000000  A5      : 0x60008054  
+A6      : 0x3ffc1030  A7      : 0x3ffdac3f  A8      : 0x800846b8  A9      : 0x3ffc0590  
+A10     : 0x00000004  A11     : 0x00000000  A12     : 0x6000804c  A13     : 0x00000000  
+A14     : 0x3ffbb7f8  A15     : 0xfffffffc  SAR     : 0x00000019  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x400845f0  LEND    : 0x400845f7  LCOUNT  : 0x00000000  
+
+Backtrace: 0x400846b8:0x3ffc05b0 0x40086e4f:0x3ffc05d0 0x400870ef:0x3ffc05f0 0x4008174d:0x3ffc0610 0x4013a877:0x00000000
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+

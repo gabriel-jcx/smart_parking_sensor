@@ -1,0 +1,6 @@
+HEADER=https://
+URL=ucsc
+TLD=.edu/
+LOT=3
+BLOCK=5
+SPOT=44

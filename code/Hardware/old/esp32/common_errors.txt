@@ -1,0 +1,65 @@
+
+GOOGLE ERROR
+
+pi@raspberrypi:~/cmpe123_1/code/Hardware/esp32 $ python temp_tcp2.py 
+Connection address: ('10.3.141.194', 62355)
+Recieved: 1,AnyTasks
+no tasks for esp32
+Connection address: ('10.3.141.194', 57340)
+Recieved: 1,StatusChanged,taken
+req picture from ESP32
+Recieved: 1,Picture,taken
+Opened test.bmp
+file closed
+Connection address: ('10.3.141.194', 60062)
+Recieved: 1,Auth,taken
+status changed to taken
+QR code is: 1235
+Claiming space: 1 with ID: 1235
+Traceback (most recent call last):
+  File "temp_tcp2.py", line 54, in <module>
+    if(gcloud_demo.claim_space(data_p[0],decoder.get_code("qrcode.jpg"))):
+  File "/home/pi/cmpe123_1/code/Hardware/esp32/gcloud_demo.py", line 157, in claim_space
+    with datastore_client.transaction():
+  File "/usr/local/lib/python2.7/dist-packages/google/cloud/datastore/batch.py", line 293, in __enter__
+    self.begin()
+  File "/usr/local/lib/python2.7/dist-packages/google/cloud/datastore/transaction.py", line 210, in begin
+    self.project)
+  File "/usr/local/lib/python2.7/dist-packages/google/cloud/datastore_v1/gapic/datastore_client.py", line 346, in begin_transaction
+    request, retry=retry, timeout=timeout, metadata=metadata)
+  File "/usr/local/lib/python2.7/dist-packages/google/api_core/gapic_v1/method.py", line 139, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/google/api_core/retry.py", line 260, in retry_wrapped_func
+    on_error=on_error,
+  File "/usr/local/lib/python2.7/dist-packages/google/api_core/retry.py", line 177, in retry_target
+    return target()
+  File "/usr/local/lib/python2.7/dist-packages/google/api_core/timeout.py", line 206, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/google/api_core/grpc_helpers.py", line 56, in error_remapped_callable
+    six.raise_from(exceptions.from_grpc_error(exc), exc)
+  File "/usr/local/lib/python2.7/dist-packages/six.py", line 737, in raise_from
+    raise value
+google.api_core.exceptions.DeadlineExceeded: 504 Deadline Exceeded
+
+
+SOCKET ERROR
+
+pi@raspberrypi:~/cmpe123_1/code/Hardware/esp32 $ python temp_tcp2.py 
+Connection address: ('10.3.141.194', 49858)
+Recieved: 1,AnyTasks
+no tasks for esp32
+Traceback (most recent call last):
+  File "temp_tcp2.py", line 22, in <module>
+    data = conn.recv(BUFFER_SIZE)
+socket.error: [Errno 104] Connection reset by peer
+
+SOCKET ERROR 2
+
+pi@raspberrypi:~/cmpe123_1/code/Hardware/esp32 $ python temp_tcp2.py 
+Traceback (most recent call last):
+  File "temp_tcp2.py", line 14, in <module>
+    s.bind((TCP_IP, TCP_PORT))
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+

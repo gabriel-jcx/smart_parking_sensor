@@ -1,0 +1,12 @@
+import subprocess
+
+
+def convToHex ( str ):
+    output
+    for letter in str:
+        output = output + ' ' + letter.encode("hex")
+    print output
+
+convToHex("abc")
+
+#subprocess.call(["cat", "beacon.sh"])
